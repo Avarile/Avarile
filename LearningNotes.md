@@ -12,4 +12,7 @@
     - Interceptors -> Add extra logic to incoming requests or outgoing response.
     - Repositories -> Handles data stored in a DB.
 
-
+2. Detail of an api module (use UserModule for instance):
+  - ApiModule
+    - UserEntity: Lists the different properties that a User has.
+    - Methods to find, update, delete and create a user.
