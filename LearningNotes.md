@@ -65,4 +65,7 @@
   - and we also need to implement the  UseInterceptors(ClassSerializerInterceptor) to the Controllers we need to filter
   - on a second thought, what if a admin want to inspect all the users, and he should have all the infos --- including the password, so we need to make some change, here we need to create an custom interceptor.
 
-11. Custom Decorator: Optional cuz this only make the codes more readerable
+11. Custom Decorator: Optional cuz this only make the codes more readerable. --- its actully just a function.
+
+
+12. the entire authentication process: https://github.com/Avarile/Avarile/blob/main/image0.png
