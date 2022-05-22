@@ -68,4 +68,5 @@
 11. Custom Decorator: Optional cuz this only make the codes more readerable. --- its actully just a function.
 
 
-12. the entire authentication process: https://github.com/Avarile/Avarile/blob/main/image0.png
+
+12. The entire authentication process: ![Authentication Process](https://github.com/Avarile/Avarile/blob/main/image0.png)
