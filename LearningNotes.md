@@ -54,3 +54,15 @@
 7. there are serveral hooks in the typeorm like @AfterUpdate @After
 
 8. the reason why we dont use insert / update / delete is because they directly manipulate the data base, and won't trigger the hook. this may cause problems and we wont know why problems occurs.
+
+9. IMPORTANT: the excepiton should be throw by the Service but not Controller
+
+10. Filtered Response (for example: we dont actually return the password of a user when we get users)
+  - below is How the request and response works:
+  - Request [Get/users/2]                                                                                => UsersController[findUser()] => UserService[findOne()]
+  - [Class Serializer Interceptor: Turns an instance of UserEntity into a plain object on some rule]     <=                [UserEntity] <=
+  - so we can add @Exclude in any Column in Entity, to mark it that "this prop will not be returned"
+  - and we also need to implement the  UseInterceptors(ClassSerializerInterceptor) to the Controllers we need to filter
+  - on a second thought, what if a admin want to inspect all the users, and he should have all the infos --- including the password, so we need to make some change, here we need to create an custom interceptor.
+
+11. Custom Decorator: Optional cuz this only make the codes more readerable
