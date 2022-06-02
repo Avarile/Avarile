@@ -3,15 +3,17 @@
 1. Backend basic logic:
   - Request / Response  <=>  Validate data contained in the request(PIPE) => Make sure the user is authenticated(Guard) => route a request to a particular function(Controller) => Run some business logic(Service) => Access a data base(Repository).
   - Parts of Nestjs:
+    - Entity -> Data Format for DB.
     - Controller -> handles the incoming request.
     - Services -> handles the data access and business logic.
     - Modules -> Groups together codes.
-    - Pipes -> Validate incoming data.
-    - DTO -> To validate incoming request bodies
-    - Filters -> handles errors that happens during requests handling.
-    - Guards -> Handles authentication.
+    - Pipes -> Validate incoming data. Request.payload normally utilizing Pipes
+    - DTO -> To validate incoming request bodies, this is the Data Format to frontend. Response normally using DTO.
+    - Filters -> handles errors that happens during requests handling. It's normally is an implementation of the Interceptors.
+    - Guards -> Handles authentication. It's 
     - Interceptors -> Add extra logic to incoming requests or outgoing response.
     - Repositories -> Handles data stored in a DB.
+    - Logger -> Nest already have it.
 
 
 2. Detail of an api module (use UserModule for instance):
